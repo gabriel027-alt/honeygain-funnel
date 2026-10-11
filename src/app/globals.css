@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050b0e;
+  --background: #04080a;
   --foreground: #f1f7f9;
 }
 
 body {
-  background-color: #050b0e;
+  background-color: #04080a;
   color: #f1f7f9;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -17,12 +17,104 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #050b0e;
+  background: #04080a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0d2830;
+  background: #091a20;
   border-radius: 4px;
+  border: 1px solid rgba(0, 242, 254, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #00e676;
+}
+
+/* Keyframes de Animações Cyberpunk */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-1.5deg);
+  }
+}
+
+@keyframes float-coin {
+  0%, 100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.04) rotate(4deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.35), 0 0 40px rgba(0, 242, 254, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 230, 118, 0.65), 0 0 60px rgba(0, 242, 254, 0.3);
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Classes */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 6s ease-in-out 1s infinite;
+}
+
+.animate-float-coin {
+  animation: float-coin 3.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite;
+}
+
+.animate-radar {
+  animation: radar-sweep 12s linear infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Glassmorphism Card Ultra-Premium */
+.cyber-card {
+  background: rgba(6, 21, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 242, 254, 0.12);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 230, 118, 0.45);
+  box-shadow: 0 0 35px rgba(0, 230, 118, 0.15), 0 0 15px rgba(0, 242, 254, 0.1);
+  transform: translateY(-2px);
 }

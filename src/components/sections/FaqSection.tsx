@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { ChevronDown, Shield, Battery, DollarSign, Lock } from "lucide-react";
 
 export function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // Primeiro aberto por padrão conforme mockup
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // 1º item aberto por padrão conforme referência
 
   const faqs = [
     {
@@ -38,16 +38,16 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#050b0e] text-white">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
+    <section id="faq" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#04080a] text-white">
+      {/* Luz volumétrica de fundo */}
+      <div className="absolute top-1/2 left-1/4 w-[550px] h-[550px] bg-emerald-500/10 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto relative z-10 space-y-12">
+      <div className="max-w-4xl mx-auto relative z-10 space-y-14">
         
         {/* Cabeçalho */}
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#071a1f] border border-cyan-500/40 text-cyan-300 text-xs font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(0,242,254,0.15)]">
-            <span className="text-[#00e676]">➜</span>
+        <div className="text-center max-w-2xl mx-auto space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06151b] border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)]">
+            <span className="text-[#00e676] animate-pulse">➜</span>
             <span>PERGUNTAS FREQUENTES</span>
           </div>
 
@@ -55,12 +55,12 @@ export function FaqSection() {
             Tire suas dúvidas
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             Aqui estão as principais dúvidas sobre o Honeygain. Se ainda tiver alguma pergunta, nosso suporte está pronto para ajudar.
           </p>
         </div>
 
-        {/* Accordion Interativo */}
+        {/* Accordion Interativo com Transições Suaves */}
         <div className="space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -69,32 +69,32 @@ export function FaqSection() {
             return (
               <div
                 key={faq.question}
-                className="rounded-2xl bg-[#071419]/90 border border-emerald-500/20 overflow-hidden transition-colors"
+                className="cyber-card rounded-2xl overflow-hidden transition-all duration-300"
               >
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 hover:bg-[#0d2229]/50 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 hover:bg-[#07242e]/40 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <div className="flex items-center gap-3.5">
-                    <div className="p-2 rounded-xl bg-[#0d2229] text-[#00e676] shrink-0">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#07242e] to-[#0c3a4a] text-[#00e676] flex items-center justify-center shrink-0 border border-cyan-500/30">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="font-bold text-white text-sm sm:text-base">
+                    <span className="font-bold text-white text-base sm:text-lg">
                       {faq.question}
                     </span>
                   </div>
 
                   <ChevronDown
-                    className={`w-5 h-5 text-[#00e676] shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
+                    className={`w-5 h-5 text-[#00e676] shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 drop-shadow-[0_0_8px_#00e676]" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-emerald-500/10">
+                  <div className="px-5 sm:px-6 pb-6 pt-2 text-slate-300 text-sm leading-relaxed border-t border-cyan-500/10">
                     <p>{faq.answer}</p>
                   </div>
                 )}

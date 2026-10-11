@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { SITE_CONFIG } from "@/constants/config";
 import { Logo } from "@/components/common/Logo";
+import { CyberBee } from "@/components/common/CyberBee";
+import { Coin3D } from "@/components/common/Coin3D";
 import {
   ShieldCheck,
   DollarSign,
@@ -30,25 +32,25 @@ export function FinalCtaSection() {
   ];
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#050b0e] text-white overflow-hidden">
-      {/* Glow de fundo */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-emerald-500/15 rounded-full blur-[170px] pointer-events-none" />
+    <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#04080a] text-white overflow-hidden">
+      {/* Luz volumétrica de fundo */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-to-tr from-emerald-500/15 via-cyan-500/10 to-transparent rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10 rounded-3xl bg-gradient-to-br from-[#071419] to-[#040c0f] border border-emerald-500/30 p-8 sm:p-12 shadow-[0_0_50px_rgba(0,230,118,0.2)]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="max-w-6xl mx-auto relative z-10 cyber-card rounded-3xl p-8 sm:p-14 border-emerald-500/40 shadow-[0_0_60px_rgba(0,230,118,0.25)]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Lado Esquerdo */}
+          {/* Lado Esquerdo: Textos, Badges & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <Logo />
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#071a1f] border border-cyan-500/40 text-cyan-300 text-xs font-bold tracking-wider uppercase">
-              <span className="text-[#00e676]">➜</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06151b] border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase">
+              <span className="text-[#00e676] animate-pulse">➜</span>
               <span>RENDA PASSIVA REAL</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               Sua conexão{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-[#00e676] to-[#05f292]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-[#00e676] to-[#05f292] filter drop-shadow-[0_0_20px_rgba(0,230,118,0.4)]">
                 vale dinheiro
               </span>
             </h2>
@@ -63,22 +65,22 @@ export function FinalCtaSection() {
                   href={SITE_CONFIG.referralUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#00e676] hover:bg-[#05f292] text-[#050b0e] font-extrabold text-base shadow-[0_0_30px_rgba(0,230,118,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-gradient-to-r from-[#00e676] to-[#05f292] text-[#04080a] font-black text-base shadow-[0_0_35px_rgba(0,230,118,0.55)] hover:shadow-[0_0_50px_rgba(0,230,118,0.85)] hover:scale-[1.03] active:scale-[0.98] transition-all"
                 >
                   <span>Começar Agora — É Grátis</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
 
               <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-                <span className="truncate max-w-[280px] sm:max-w-none text-[#00e676]">
+                <span className="truncate max-w-[280px] sm:max-w-none text-[#00e676] font-bold">
                   {SITE_CONFIG.referralUrl}
                 </span>
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="p-1 rounded bg-[#0d2229] hover:bg-[#13303a] text-slate-300 transition-colors"
-                  title="Copiar link"
+                  className="p-1.5 rounded-lg bg-[#07242e] hover:bg-[#0c3a4a] text-slate-300 transition-colors"
+                  title="Copiar link oficial"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-[#00e676]" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
@@ -86,7 +88,7 @@ export function FinalCtaSection() {
             </div>
 
             {/* 4 Pontos de Confiança */}
-            <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-300">
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-300 font-semibold">
               {guarantees.map((g) => {
                 const Icon = g.icon;
                 return (
@@ -99,30 +101,30 @@ export function FinalCtaSection() {
             </div>
           </div>
 
-          {/* Lado Direito: Celular + Abelhinha Mascot */}
-          <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="w-60 sm:w-64 rounded-3xl bg-[#071419] border border-cyan-400/40 p-4 shadow-2xl relative">
-              <div className="rounded-2xl bg-[#040c0f] p-4 text-center space-y-2">
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider">Total Earnings</span>
-                <div className="text-3xl font-black text-white">
+          {/* Lado Direito: Celular 3D Flutuante + CyberBee Mascot + Moeda 3D */}
+          <div className="lg:col-span-5 relative flex justify-center items-center py-6">
+            {/* Moeda Flutuante Topo */}
+            <div className="absolute top-2 -left-2 z-30">
+              <Coin3D size="md" delay="0.5s" />
+            </div>
+
+            {/* Smartphone em Perspectiva */}
+            <div className="w-64 sm:w-72 rounded-[36px] bg-[#07212a] border border-cyan-400/40 p-3.5 shadow-2xl relative [transform:perspective(1000px)_rotateY(-10deg)]">
+              <div className="rounded-[28px] bg-[#03090c] p-5 text-center space-y-3 border border-emerald-500/25">
+                <span className="text-[10px] text-slate-400 font-mono uppercase tracking-widest block">Total Earnings</span>
+                <div className="text-3xl font-black text-white flex items-center justify-center gap-1">
                   <span className="text-[#00e676]">$</span> 42.36
                 </div>
-                <div className="w-full h-1.5 bg-[#0d2229] rounded-full overflow-hidden mt-3">
-                  <div className="w-2/3 h-full bg-[#00e676]" />
+                <div className="w-full h-1.5 bg-[#0a232c] rounded-full overflow-hidden mt-2">
+                  <div className="w-3/4 h-full bg-gradient-to-r from-[#00e676] to-cyan-400" />
                 </div>
+                <span className="text-[10px] text-emerald-400 font-semibold block">Pronto para saque imediato</span>
               </div>
             </div>
 
-            {/* Mascote Abelha */}
-            <div className="absolute -bottom-4 -right-2 w-24 h-24 rounded-full bg-gradient-to-tr from-[#00e676] to-cyan-400 p-1 shadow-[0_0_30px_rgba(0,230,118,0.6)] flex items-center justify-center animate-bounce duration-1000">
-              <div className="w-full h-full rounded-full bg-[#071419] flex items-center justify-center text-3xl">
-                🐝
-              </div>
-            </div>
-
-            {/* Moeda flutuante */}
-            <div className="absolute top-2 -left-4 w-10 h-10 rounded-full bg-[#00e676] text-[#050b0e] font-black flex items-center justify-center text-lg shadow-[0_0_20px_rgba(0,230,118,0.8)]">
-              $
+            {/* Mascote CyberBee Flutuante 3D Sem Emojis */}
+            <div className="absolute -bottom-6 -right-6 sm:-right-8 z-30">
+              <CyberBee size={130} />
             </div>
           </div>
 

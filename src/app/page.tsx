@@ -12,7 +12,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050b0e] text-[#f1f7f9] selection:bg-[#00e676] selection:text-[#050b0e]">
+    <div className="min-h-screen bg-[#04080a] text-[#f1f7f9] selection:bg-[#00e676] selection:text-[#04080a]">
       {/* 1. Header Fixo com Navegação e CTA */}
       <Navbar />
 
