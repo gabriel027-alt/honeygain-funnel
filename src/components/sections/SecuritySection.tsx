@@ -77,17 +77,17 @@ export function SecuritySection() {
             </div>
           </div>
 
-          {/* Lado Direito: Escudo 3D Ultra-HD (/shield-3d.png) */}
+          {/* Lado Direito: Escudo 3D Ultra-HD (/shield-3d-semfundo.png) */}
           <div className="lg:col-span-5 relative flex justify-center items-center">
             <div className="absolute w-80 h-80 bg-gradient-to-tr from-cyan-400/20 via-emerald-500/15 to-transparent rounded-full blur-[110px] pointer-events-none" />
 
             <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
               <Image
-                src="/shield-3d.png"
+                src="/shield-3d-semfundo.png"
                 alt="Escudo de Segurança 3D Honeygain"
                 width={520}
                 height={520}
-                className="w-full max-w-sm sm:max-w-md h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] rounded-2xl"
+                className="w-full max-w-sm sm:max-w-md h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)]"
               />
             </div>
           </div>

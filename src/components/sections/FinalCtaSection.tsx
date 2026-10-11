@@ -110,13 +110,13 @@ export function FinalCtaSection() {
             </div>
           </div>
 
-          {/* Lado Direito: Arte 3D Oficial em Alta Resolução (/hero-bee.png) */}
+          {/* Lado Direito: Arte 3D Oficial em Alta Resolução (/hero-bee-semfundo.png) */}
           <div className="lg:col-span-5 relative flex justify-center items-center py-4">
             <div className="absolute w-72 h-72 bg-gradient-to-tr from-[#00e676]/20 to-cyan-400/20 rounded-full blur-[90px] pointer-events-none" />
 
             <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
               <Image
-                src="/hero-bee.png"
+                src="/hero-bee-semfundo.png"
                 alt="Honeygain App e Mascote Oficial 3D"
                 width={520}
                 height={520}

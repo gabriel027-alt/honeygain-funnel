@@ -115,12 +115,12 @@ export function PaymentsSection() {
             ))}
           </div>
 
-          {/* Lado Direito: Arte 3D da Carteira Digital (/wallet-3d.jpg) */}
+          {/* Lado Direito: Arte 3D da Carteira Digital (/wallet-3d-semfundo.png) */}
           <div className="lg:col-span-5 relative flex justify-center items-center py-2">
             <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
               <div className="rounded-3xl overflow-hidden border border-emerald-500/30 drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] bg-[#04080a]">
                 <Image
-                  src="/wallet-3d.jpg"
+                  src="/wallet-3d-semfundo.png"
                   alt="Carteira Digital 3D com Moedas e Cartões Neon"
                   width={560}
                   height={420}

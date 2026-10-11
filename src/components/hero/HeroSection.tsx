@@ -80,19 +80,19 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Coluna da Direita: Fusão Perfeita com mix-blend-screen e máscara radial */}
+          {/* Coluna da Direita: Mascote e Mockup 3D */}
           <div className="lg:col-span-6 relative w-full flex items-center justify-center py-4">
             {/* Halo de luz volumétrica */}
             <div className="absolute w-[520px] h-[520px] bg-gradient-to-tr from-[#00e676]/20 via-cyan-400/20 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
             <div className="relative z-20 w-full flex items-center justify-center animate-float transition-transform duration-500 hover:scale-[1.02]">
               <Image
-                src="/hero-bee.png"
+                src="/hero-bee-semfundo.png"
                 alt="Honeygain 3D Smartphone, Mascote e Moedas"
                 width={620}
                 height={620}
                 priority
-                className="w-full max-w-[520px] h-auto object-contain mix-blend-screen drop-shadow-[0_0_50px_rgba(0,230,118,0.3)] [mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]"
+                className="w-full max-w-[520px] h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)]"
               />
             </div>
           </div>

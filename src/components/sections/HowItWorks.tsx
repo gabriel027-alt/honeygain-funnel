@@ -83,11 +83,11 @@ export function HowItWorks() {  return (
           <div className="lg:col-span-7 flex justify-center items-center py-4">
             <div className="relative w-full max-w-[500px]">
               <Image
-                src="/devices.png"
+                src="/devices-semfundo.png"
                 alt="Ecossistema Honeygain em Dispositivos Conectados"
                 width={720}
                 height={480}
-                className="w-full max-w-[500px] mx-auto drop-shadow-[0_0_50px_rgba(0,242,254,0.2)] mix-blend-screen"
+                className="w-full max-w-[500px] mx-auto drop-shadow-[0_0_50px_rgba(0,242,254,0.2)]"
               />
             </div>
           </div>
