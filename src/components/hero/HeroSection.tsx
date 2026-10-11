@@ -92,7 +92,7 @@ export function HeroSection() {
                 width={620}
                 height={620}
                 priority
-                className="w-full max-w-[520px] h-auto object-contain mix-blend-screen drop-shadow-[0_0_60px_rgba(0,230,118,0.3)] [mask-image:radial-gradient(ellipse_at_center,black_65%,transparent_100%)]"
+                className="w-full max-w-[520px] h-auto object-contain mix-blend-screen drop-shadow-[0_0_50px_rgba(0,230,118,0.3)] [mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]"
               />
             </div>
           </div>
