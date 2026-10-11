@@ -110,20 +110,18 @@ export function FinalCtaSection() {
             </div>
           </div>
 
-          {/* Lado Direito: Arte 3D Renderizada de Alta Resolução da Referência (Sem Emojis) */}
-          <div className="lg:col-span-5 relative flex justify-center items-center py-6">
+          {/* Lado Direito: Arte 3D Oficial em Alta Resolução (/hero-bee.png) */}
+          <div className="lg:col-span-5 relative flex justify-center items-center py-4">
             <div className="absolute w-72 h-72 bg-gradient-to-tr from-[#00e676]/20 to-cyan-400/20 rounded-full blur-[90px] pointer-events-none" />
 
-            <div className="relative z-20 animate-float transition-transform duration-300 hover:scale-[1.03]">
-              <div className="relative rounded-3xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm">
-                <Image
-                  src="/assets/final-cta-3d-art.png"
-                  alt="Honeygain App e Mascote Oficial 3D"
-                  width={380}
-                  height={460}
-                  className="w-auto h-[350px] sm:h-[400px] object-contain drop-shadow-[0_15px_30px_rgba(0,230,118,0.3)]"
-                />
-              </div>
+            <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
+              <Image
+                src="/hero-bee.png"
+                alt="Honeygain App e Mascote Oficial 3D"
+                width={520}
+                height={520}
+                className="w-full max-w-sm sm:max-w-md h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)]"
+              />
             </div>
           </div>
 

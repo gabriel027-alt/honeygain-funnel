@@ -77,17 +77,17 @@ export function SecuritySection() {
             </div>
           </div>
 
-          {/* Lado Direito: Escudo 3D Renderizado da Imagem de Referência */}
+          {/* Lado Direito: Escudo 3D Ultra-HD (/shield-3d.png) */}
           <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="absolute w-80 h-80 bg-gradient-to-tr from-cyan-400/25 via-emerald-500/20 to-transparent rounded-full blur-[110px] pointer-events-none" />
+            <div className="absolute w-80 h-80 bg-gradient-to-tr from-cyan-400/20 via-emerald-500/15 to-transparent rounded-full blur-[110px] pointer-events-none" />
 
-            <div className="relative rounded-3xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03]">
+            <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
               <Image
-                src="/assets/shield-3d-art.png"
-                alt="Honeygain Escudo 3D de Criptografia e Segurança"
-                width={330}
-                height={360}
-                className="w-auto h-[320px] sm:h-[350px] object-contain drop-shadow-[0_15px_35px_rgba(0,230,118,0.3)]"
+                src="/shield-3d.png"
+                alt="Escudo de Segurança 3D Honeygain"
+                width={520}
+                height={520}
+                className="w-full max-w-sm sm:max-w-md h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] rounded-2xl"
               />
             </div>
           </div>

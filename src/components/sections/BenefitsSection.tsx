@@ -80,14 +80,16 @@ export function BenefitsSection() {
           <div className="lg:col-span-5 relative flex justify-center items-center">
             <div className="absolute w-72 h-72 bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="relative rounded-3xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03]">
-              <Image
-                src="/assets/terminal-3d-art.png"
-                alt="Honeygain Terminal Holográfico 3D"
-                width={360}
-                height={350}
-                className="w-auto h-[320px] sm:h-[360px] object-contain drop-shadow-[0_15px_30px_rgba(0,230,118,0.3)]"
-              />
+            <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
+              <div className="rounded-3xl overflow-hidden border border-cyan-400/30 drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] bg-[#04080a]">
+                <Image
+                  src="/assets/terminal-3d-art.png"
+                  alt="Honeygain Terminal Holográfico 3D"
+                  width={420}
+                  height={420}
+                  className="w-full max-w-sm h-auto object-contain rounded-3xl"
+                />
+              </div>
             </div>
           </div>
 

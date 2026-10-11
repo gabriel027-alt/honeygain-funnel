@@ -94,15 +94,15 @@ export function HowItWorks() {
         {/* Bloco de Dispositivos e Lista de Vantagens */}
         <div className="cyber-card rounded-3xl p-6 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Lado Esquerdo: Arte 3D dos Dispositivos da Referência */}
+          {/* Lado Esquerdo: Render 3D Ultra-HD (/devices.png) */}
           <div className="lg:col-span-7 flex justify-center items-center py-4 relative">
-            <div className="relative rounded-2xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03]">
+            <div className="relative rounded-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.03]">
               <Image
-                src="/assets/devices-3d-art.png"
-                alt="Honeygain Dispositivos Conectados 3D"
-                width={480}
-                height={280}
-                className="w-full max-w-md h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,230,118,0.3)]"
+                src="/devices.png"
+                alt="Ecossistema Honeygain de Dispositivos Conectados"
+                width={720}
+                height={480}
+                className="w-full max-w-xl h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] rounded-2xl"
               />
             </div>
           </div>
