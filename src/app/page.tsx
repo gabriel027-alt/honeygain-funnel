@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
+import { FloatingBee } from "@/components/common/FloatingBee";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { EarningsCalculator } from "@/components/calculator/EarningsCalculator";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -13,6 +14,9 @@ import { Footer } from "@/components/layout/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#04080a] text-[#f1f7f9] selection:bg-[#00e676] selection:text-[#04080a]">
+      {/* Mascote 3D Imersivo (acompanha o scroll por toda a página) */}
+      <FloatingBee />
+
       {/* 1. Header Fixo com Navegação e CTA */}
       <Navbar />
 
