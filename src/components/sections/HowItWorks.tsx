@@ -1,139 +1,122 @@
-import React from "react";
-import Image from "next/image";
-import { Download, Wifi, DollarSign, CheckCircle2 } from "lucide-react";
+import React from 'react';
+import Image from 'next/image';
+import { Download, Wifi, DollarSign, CheckCircle2 } from 'lucide-react';
 
-export function HowItWorks() {
-  const steps = [
-    {
-      num: 1,
-      icon: Download,
-      title: "Baixe o app",
-      desc: "Instale o Honeygain no seu celular ou PC.",
-    },
-    {
-      num: 2,
-      icon: Wifi,
-      title: "Conecte-se",
-      desc: "Deixe o app rodando em segundo plano.",
-    },
-    {
-      num: 3,
-      icon: DollarSign,
-      title: "Ganhe",
-      desc: "Receba pagamentos em USD, direto na sua conta.",
-    },
-  ];
+const steps = [
+  {
+    number: '1',
+    title: 'Baixe o app',
+    description: 'Instale o Honeygain no seu celular ou PC.',
+    icon: Download,
+  },
+  {
+    number: '2',
+    title: 'Conecte-se',
+    description: 'Deixe o app rodando em segundo plano.',
+    icon: Wifi,
+  },
+  {
+    number: '3',
+    title: 'Ganhe',
+    description: 'Receba pagamentos em USD, direto na sua conta.',
+    icon: DollarSign,
+  },
+];
 
-  const benefits = [
-    "Funciona no celular e PC",
-    "Sem precisar de habilidades técnicas",
-    "Pagamento automático",
-    "Suporte 24/7",
-  ];
+const benefits = [
+  'Funciona no celular e PC',
+  'Sem precisar de habilidades técnicas',
+  'Pagamento automático',
+  'Suporte 24/7',
+];
 
-  const companies = [
-    { name: "Google", style: "font-sans font-bold" },
-    { name: "amazon", style: "font-mono font-bold lowercase" },
-    { name: "Meta", style: "font-sans font-black" },
-    { name: "Microsoft", style: "font-sans font-semibold tracking-tight" },
-    { name: "verizon", style: "font-sans font-extrabold italic" },
-  ];
+const partners = ['Google', 'amazon', 'Meta', 'Microsoft', 'verizon'];
 
+export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#04080a] text-white">
-      {/* Luz volumétrica de fundo */}
-      <div className="absolute top-1/4 left-1/3 w-[600px] h-[500px] bg-cyan-500/10 rounded-full blur-[170px] pointer-events-none" />
-
+    <section id="como-funciona" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#050b0e] text-white">
       <div className="max-w-6xl mx-auto relative z-10 space-y-16">
-        
-        {/* Cabeçalho */}
-        <div className="text-center max-w-2xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#071a20]/80 border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)] backdrop-blur-md">
-            <span className="text-[#00e676] animate-pulse">➜</span>
+        {/* Cabeçalho da Seção */}
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#071a1f] border border-cyan-500/40 text-cyan-300 text-xs font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(0,242,254,0.15)]">
+            <span className="text-[#00e676]">➜</span>
             <span>COMO FUNCIONA</span>
           </div>
-
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
             É assim que você ganha
           </h2>
-
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base">
             Em poucos passos, sua conexão de internet já começa a gerar renda. Tudo é automático e seguro.
           </p>
         </div>
 
-        {/* 3 Círculos Numerados com Linha de Conexão com Nós Acesos */}
-        <div className="relative">
-          <div className="hidden md:block absolute top-12 inset-x-24 h-0.5 bg-gradient-to-r from-transparent via-[#00e676]/40 to-transparent z-0">
-            <div className="absolute inset-0 bg-[#00f2fe]/30 blur-sm" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            {steps.map((step) => {
-              const Icon = step.icon;
-              return (
-                <div
-                  key={step.num}
-                  className="cyber-card rounded-2xl p-7 flex flex-col items-center text-center space-y-4"
-                >
-                  <div className="relative w-18 h-18 rounded-full bg-gradient-to-tr from-[#061e27] to-[#0a2f3d] border border-cyan-400/40 flex items-center justify-center text-[#00e676] shadow-[0_0_25px_rgba(0,230,118,0.25)]">
-                    <Icon className="w-8 h-8" />
-                    <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-r from-[#00e676] to-[#05f292] text-[#04080a] text-xs font-black flex items-center justify-center shadow-[0_0_10px_#00e676]">
-                      {step.num}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white pt-1">{step.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{step.desc}</p>
+        {/* 3 Passos */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <div
+                key={step.number}
+                className="relative rounded-2xl bg-[#071419]/80 border border-emerald-500/20 p-6 sm:p-8 flex flex-col items-center text-center space-y-4 hover:border-emerald-500/40 transition-colors"
+              >
+                <div className="relative w-16 h-16 rounded-full bg-[#0d2229] border border-emerald-500/40 flex items-center justify-center text-[#00e676] shadow-[0_0_20px_rgba(0,230,118,0.2)]">
+                  <Icon className="w-7 h-7" />
+                  <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#00e676] text-[#050b0e] text-xs font-black flex items-center justify-center">
+                    {step.number}
+                  </span>
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="text-lg font-bold text-white">{step.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  {step.description}
+                </p>
+                {index < 2 && (
+                  <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-20 text-[#00e676] font-bold text-xl">
+                    ➔
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Bloco de Dispositivos e Lista de Vantagens */}
-        <div className="cyber-card rounded-3xl p-6 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          {/* Lado Esquerdo: Render 3D Ultra-HD (/devices.png) */}
-          <div className="lg:col-span-7 flex justify-center items-center py-4 relative">
-            <div className="relative rounded-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.03]">
+        {/* Showcase dos Dispositivos */}
+        <div className="rounded-3xl bg-[#071419]/70 border border-emerald-500/20 p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 flex justify-center items-center py-4">
+            <div className="relative w-full max-w-[500px]">
               <Image
                 src="/devices.png"
-                alt="Ecossistema Honeygain de Dispositivos Conectados"
-                width={720}
-                height={480}
-                className="w-full max-w-xl h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)] rounded-2xl"
+                alt="Ecossistema Honeygain em Dispositivos Conectados"
+                width={550}
+                height={400}
+                className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(0,242,254,0.25)] mix-blend-screen hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
 
-          {/* Lado Direito: Lista de Vantagens com Checkbox Verde Neon */}
           <div className="lg:col-span-5 space-y-4">
-            <h4 className="text-xl font-bold text-white mb-2">Simplicidade e performance:</h4>
-            {benefits.map((item) => (
-              <div key={item} className="flex items-center gap-3.5 p-3.5 rounded-xl border border-emerald-500/25 bg-[#071a20]/80 backdrop-blur-md">
-                <CheckCircle2 className="w-5 h-5 text-[#00e676] shrink-0 drop-shadow-[0_0_8px_#00e676]" />
-                <span className="text-sm font-semibold text-slate-200">{item}</span>
+            <h4 className="text-lg font-bold text-white mb-2">Simplicidade total:</h4>
+            {benefits.map((benefit) => (
+              <div key={benefit} className="flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 text-[#00e676] shrink-0" />
+                <span className="text-sm font-medium text-slate-200">{benefit}</span>
               </div>
             ))}
           </div>
-
         </div>
 
-        {/* Faixa de Empresas Parceiras */}
-        <div className="text-center space-y-6 pt-6 border-t border-cyan-500/10">
-          <span className="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block">
+        {/* Marcas Parceiras */}
+        <div className="text-center space-y-6 pt-4 border-t border-emerald-500/10">
+          <span className="text-[11px] uppercase tracking-widest text-slate-400 font-semibold block">
             SEU TRÁFEGO AJUDA GRANDES EMPRESAS
           </span>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75">
-            {companies.map((c) => (
-              <span key={c.name} className={`text-xl sm:text-2xl text-slate-300 hover:text-white transition-colors ${c.style}`}>
-                {c.name}
+            {partners.map((partner) => (
+              <span key={partner} className="text-xl sm:text-2xl text-slate-300 font-bold">
+                {partner}
               </span>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

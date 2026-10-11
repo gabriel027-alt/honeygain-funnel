@@ -11,7 +11,7 @@ import {
 
 export function HeroSection() {
   return (
-    <section className="relative pt-8 pb-20 md:pt-16 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#04080a] text-white">
+    <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#04080a] text-white">
       {/* Luzes Volumétricas de Fundo (Cyan & Emerald Orbs) */}
       <div className="absolute top-10 left-10 w-[550px] h-[550px] bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute top-1/4 right-0 w-[650px] h-[650px] bg-emerald-500/15 rounded-full blur-[180px] pointer-events-none" />
@@ -80,19 +80,19 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Coluna da Direita: Render 3D Oficial Ultra-HD (/hero-bee.png) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center py-4">
+          {/* Coluna da Direita: Fusão Perfeita com mix-blend-screen e máscara radial */}
+          <div className="lg:col-span-6 relative w-full flex items-center justify-center py-4">
             {/* Halo de luz volumétrica */}
-            <div className="absolute w-[500px] h-[500px] bg-gradient-to-tr from-[#00e676]/20 via-cyan-400/20 to-transparent rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute w-[520px] h-[520px] bg-gradient-to-tr from-[#00e676]/20 via-cyan-400/20 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
-            <div className="relative z-20 animate-float transition-transform duration-500 hover:scale-[1.03]">
+            <div className="relative z-20 w-full flex items-center justify-center animate-float transition-transform duration-500 hover:scale-[1.02]">
               <Image
                 src="/hero-bee.png"
                 alt="Honeygain 3D Smartphone, Mascote e Moedas"
                 width={620}
                 height={620}
                 priority
-                className="w-full max-w-[480px] sm:max-w-[540px] h-auto object-contain drop-shadow-[0_0_40px_rgba(0,230,118,0.25)]"
+                className="w-full max-w-[520px] h-auto object-contain mix-blend-screen drop-shadow-[0_0_60px_rgba(0,230,118,0.3)] [mask-image:radial-gradient(ellipse_at_center,black_65%,transparent_100%)]"
               />
             </div>
           </div>
