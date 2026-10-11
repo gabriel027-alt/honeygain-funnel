@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Download, Wifi, DollarSign, CheckCircle2 } from "lucide-react";
 
 export function HowItWorks() {
@@ -47,7 +48,7 @@ export function HowItWorks() {
         
         {/* Cabeçalho */}
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06151b] border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#071a20]/80 border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)] backdrop-blur-md">
             <span className="text-[#00e676] animate-pulse">➜</span>
             <span>COMO FUNCIONA</span>
           </div>
@@ -63,7 +64,6 @@ export function HowItWorks() {
 
         {/* 3 Círculos Numerados com Linha de Conexão com Nós Acesos */}
         <div className="relative">
-          {/* Linha de conexão horizontal nos nós para desktop */}
           <div className="hidden md:block absolute top-12 inset-x-24 h-0.5 bg-gradient-to-r from-transparent via-[#00e676]/40 to-transparent z-0">
             <div className="absolute inset-0 bg-[#00f2fe]/30 blur-sm" />
           </div>
@@ -76,7 +76,6 @@ export function HowItWorks() {
                   key={step.num}
                   className="cyber-card rounded-2xl p-7 flex flex-col items-center text-center space-y-4"
                 >
-                  {/* Círculo com Número e Efeito Glow */}
                   <div className="relative w-18 h-18 rounded-full bg-gradient-to-tr from-[#061e27] to-[#0a2f3d] border border-cyan-400/40 flex items-center justify-center text-[#00e676] shadow-[0_0_25px_rgba(0,230,118,0.25)]">
                     <Icon className="w-8 h-8" />
                     <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-r from-[#00e676] to-[#05f292] text-[#04080a] text-xs font-black flex items-center justify-center shadow-[0_0_10px_#00e676]">
@@ -92,51 +91,27 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Bloco de Dispositivos Flutuando em Sobreposição & Vantagens */}
+        {/* Bloco de Dispositivos e Lista de Vantagens */}
         <div className="cyber-card rounded-3xl p-6 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Lado Esquerdo: Dispositivos em Sobreposição com Perspectiva 3D */}
-          <div className="lg:col-span-7 flex justify-center items-end gap-3 sm:gap-4 relative py-6">
-            
-            {/* Smartphone Esquerdo */}
-            <div className="w-24 sm:w-32 rounded-3xl bg-[#061a22] border border-cyan-500/30 p-2 shadow-2xl [transform:rotate(-6deg)] hover:[transform:rotate(0deg)] transition-transform duration-300">
-              <div className="h-36 rounded-2xl bg-[#040c0f] flex flex-col items-center justify-center text-center p-2 border border-emerald-500/20">
-                <span className="text-[10px] text-slate-400 font-mono">Mobile App</span>
-                <span className="text-xs font-black text-[#00e676] mt-1">$ 42.36</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00e676] mt-2 animate-ping" />
-              </div>
+          {/* Lado Esquerdo: Arte 3D dos Dispositivos da Referência */}
+          <div className="lg:col-span-7 flex justify-center items-center py-4 relative">
+            <div className="relative rounded-2xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03]">
+              <Image
+                src="/assets/devices-3d-art.png"
+                alt="Honeygain Dispositivos Conectados 3D"
+                width={480}
+                height={280}
+                className="w-full max-w-md h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,230,118,0.3)]"
+              />
             </div>
-
-            {/* Laptop Central de Destaque */}
-            <div className="w-56 sm:w-72 rounded-2xl bg-[#07242e] border border-cyan-400/50 p-3.5 shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_30px_rgba(0,242,254,0.2)] relative z-20 [transform:scale(1.05)]">
-              <div className="h-40 rounded-xl bg-[#03090c] flex flex-col items-center justify-center text-center p-4 border border-emerald-500/30">
-                <span className="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Active Node: Windows</span>
-                <span className="text-2xl sm:text-3xl font-black text-white mt-1">
-                  <span className="text-[#00e676]">$</span> 42.36
-                </span>
-                <div className="w-full h-1.5 bg-[#0a232c] rounded-full mt-4 overflow-hidden">
-                  <div className="w-4/5 h-full bg-gradient-to-r from-[#00e676] to-cyan-400" />
-                </div>
-                <span className="text-[10px] text-cyan-300 font-mono mt-2">100% Piloto Automático</span>
-              </div>
-            </div>
-
-            {/* Smartphone Direito */}
-            <div className="w-24 sm:w-32 rounded-3xl bg-[#061a22] border border-cyan-500/30 p-2 shadow-2xl [transform:rotate(6deg)] hover:[transform:rotate(0deg)] transition-transform duration-300">
-              <div className="h-36 rounded-2xl bg-[#040c0f] flex flex-col items-center justify-center text-center p-2 border border-emerald-500/20">
-                <span className="text-[10px] text-slate-400 font-mono">Tablet</span>
-                <span className="text-xs font-black text-cyan-400 mt-1">Sincronizado</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 animate-pulse" />
-              </div>
-            </div>
-
           </div>
 
           {/* Lado Direito: Lista de Vantagens com Checkbox Verde Neon */}
           <div className="lg:col-span-5 space-y-4">
             <h4 className="text-xl font-bold text-white mb-2">Simplicidade e performance:</h4>
             {benefits.map((item) => (
-              <div key={item} className="flex items-center gap-3.5 p-3 rounded-xl bg-[#040c0f]/60 border border-emerald-500/15">
+              <div key={item} className="flex items-center gap-3.5 p-3.5 rounded-xl border border-emerald-500/25 bg-[#071a20]/80 backdrop-blur-md">
                 <CheckCircle2 className="w-5 h-5 text-[#00e676] shrink-0 drop-shadow-[0_0_8px_#00e676]" />
                 <span className="text-sm font-semibold text-slate-200">{item}</span>
               </div>

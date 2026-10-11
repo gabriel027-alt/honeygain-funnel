@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Lock, UserX, ShieldCheck } from "lucide-react";
 
 export function SecuritySection() {
@@ -40,7 +41,7 @@ export function SecuritySection() {
           {/* Lado Esquerdo: Conteúdo & 3 Cards de Segurança */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06151b] border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)]">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#071a20]/80 border border-cyan-400/40 text-cyan-300 text-xs font-black tracking-widest uppercase shadow-[0_0_18px_rgba(0,242,254,0.2)] backdrop-blur-md">
                 <span className="text-[#00e676] animate-pulse">➜</span>
                 <span>SEGURANÇA E PRIVACIDADE</span>
               </div>
@@ -54,14 +55,14 @@ export function SecuritySection() {
               </p>
             </div>
 
-            {/* 3 Badges de Segurança em Cyber-Card */}
+            {/* 3 Badges de Segurança com borda ultrafina de 1px */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
               {securityPills.map((pill) => {
                 const Icon = pill.icon;
                 return (
                   <div
                     key={pill.title}
-                    className="cyber-card rounded-2xl p-5 flex flex-col items-start gap-3"
+                    className="p-5 rounded-2xl border border-emerald-500/25 bg-[#071a20]/80 backdrop-blur-md flex flex-col items-start gap-3 hover:border-[#00e676]/50 transition-colors"
                   >
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#07242e] to-[#0c3a4a] text-[#00e676] flex items-center justify-center border border-emerald-500/30">
                       <Icon className="w-5 h-5" />
@@ -76,41 +77,18 @@ export function SecuritySection() {
             </div>
           </div>
 
-          {/* Lado Direito: Escudo Holográfico 3D com Listras de Força */}
+          {/* Lado Direito: Escudo 3D Renderizado da Imagem de Referência */}
           <div className="lg:col-span-5 relative flex justify-center items-center">
             <div className="absolute w-80 h-80 bg-gradient-to-tr from-cyan-400/25 via-emerald-500/20 to-transparent rounded-full blur-[110px] pointer-events-none" />
 
-            {/* Escudo 3D SVG com Efeitos de Glow */}
-            <div className="relative w-68 h-76 sm:w-80 sm:h-88 flex items-center justify-center [transform:perspective(1000px)_rotateY(-6deg)]">
-              <svg viewBox="0 0 200 240" className="w-full h-full filter drop-shadow-[0_0_40px_rgba(0,242,254,0.45)]">
-                {/* Linha externa do escudo */}
-                <path
-                  d="M100 10 L180 45 V125 C180 180 100 225 100 225 C100 225 20 180 20 125 V45 Z"
-                  fill="#051217"
-                  stroke="#00f2fe"
-                  strokeWidth="3.5"
-                />
-                {/* Linha interna com listras de força */}
-                <path
-                  d="M100 25 L165 55 V120 C165 168 100 205 100 205 C100 205 35 168 35 120 V55 Z"
-                  fill="#03080b"
-                  stroke="#00e676"
-                  strokeWidth="2.5"
-                  strokeDasharray="8 5"
-                />
-              </svg>
-
-              {/* Cadeado Central Holográfico */}
-              <div className="absolute flex flex-col items-center justify-center">
-                <div className="w-22 h-22 rounded-2xl bg-gradient-to-br from-[#00e676] via-[#05f292] to-cyan-400 p-1 shadow-[0_0_35px_rgba(0,230,118,0.7)] animate-pulse">
-                  <div className="w-full h-full rounded-xl bg-[#040c0f] flex items-center justify-center text-[#00e676]">
-                    <Lock className="w-10 h-10 drop-shadow-[0_0_10px_#00e676]" />
-                  </div>
-                </div>
-                <span className="text-[11px] font-mono font-black tracking-widest text-cyan-300 uppercase mt-4 bg-[#051419] px-3 py-1 rounded-full border border-cyan-400/40 shadow-md">
-                  ENCRYPTED 256-BIT
-                </span>
-              </div>
+            <div className="relative rounded-3xl overflow-hidden drop-shadow-[0_20px_50px_rgba(0,242,254,0.35)] border border-cyan-400/30 bg-[#06151b]/40 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03]">
+              <Image
+                src="/assets/shield-3d-art.png"
+                alt="Honeygain Escudo 3D de Criptografia e Segurança"
+                width={330}
+                height={360}
+                className="w-auto h-[320px] sm:h-[350px] object-contain drop-shadow-[0_15px_35px_rgba(0,230,118,0.3)]"
+              />
             </div>
           </div>
 

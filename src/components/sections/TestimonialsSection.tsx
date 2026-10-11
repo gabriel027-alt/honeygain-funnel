@@ -173,7 +173,7 @@ export function TestimonialsSection() {
               href={SITE_CONFIG.referralUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-gradient-to-r from-[#00e676] to-[#05f292] text-[#04080a] font-black text-base shadow-[0_0_30px_rgba(0,230,118,0.5)] hover:shadow-[0_0_45px_rgba(0,230,118,0.8)] hover:scale-[1.03] active:scale-[0.98] transition-all"
+              className="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-[#00e676] hover:bg-[#05f292] text-[#050b0e] font-black text-base shadow-[0_0_30px_rgba(0,230,118,0.5)] transition-all hover:scale-105 active:scale-95"
             >
               <span>Começar Agora — É Grátis</span>
               <ArrowRight className="w-5 h-5" />
@@ -187,10 +187,20 @@ export function TestimonialsSection() {
             <button
               type="button"
               onClick={handleCopy}
-              className="p-1.5 rounded-lg bg-[#07212b] hover:bg-[#0c3343] text-slate-300 transition-colors"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#07212b] hover:bg-[#0c3343] text-slate-300 font-sans font-bold transition-all hover:scale-105"
               title="Copiar link oficial"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-[#00e676]" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-[#00e676]" />
+                  <span className="text-[11px] text-[#00e676]">Copiado!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5 text-slate-300" />
+                  <span className="text-[11px]">Copiar</span>
+                </>
+              )}
             </button>
           </div>
         </div>

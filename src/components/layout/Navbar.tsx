@@ -43,7 +43,7 @@ export function Navbar() {
             href={SITE_CONFIG.referralUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00e676] to-[#05f292] text-[#04080a] text-xs font-black tracking-wide shadow-[0_0_20px_rgba(0,230,118,0.4)] hover:shadow-[0_0_35px_rgba(0,230,118,0.7)] transition-all transform hover:scale-[1.04] active:scale-[0.98] animate-pulse-glow"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#00e676] hover:bg-[#05f292] text-[#050b0e] text-xs font-black tracking-wide shadow-[0_0_30px_rgba(0,230,118,0.5)] transition-all hover:scale-105 active:scale-95 animate-pulse-glow"
           >
             <span>Começar Agora</span>
             <ArrowRight className="w-3.5 h-3.5" />
