@@ -32,8 +32,7 @@ const benefits = [
 
 const partners = ['Google', 'amazon', 'Meta', 'Microsoft', 'verizon'];
 
-export default function HowItWorks() {
-  return (
+export function HowItWorks() {  return (
     <section id="como-funciona" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#050b0e] text-white">
       <div className="max-w-6xl mx-auto relative z-10 space-y-16">
         {/* Cabeçalho da Seção */}
@@ -86,9 +85,9 @@ export default function HowItWorks() {
               <Image
                 src="/devices.png"
                 alt="Ecossistema Honeygain em Dispositivos Conectados"
-                width={550}
-                height={400}
-                className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(0,242,254,0.25)] mix-blend-screen hover:scale-105 transition-transform duration-500"
+                width={720}
+                height={480}
+                className="w-full max-w-[500px] mx-auto drop-shadow-[0_0_50px_rgba(0,242,254,0.2)] mix-blend-screen"
               />
             </div>
           </div>
@@ -121,3 +120,5 @@ export default function HowItWorks() {
     </section>
   );
 }
+
+export default HowItWorks;
